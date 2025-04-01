@@ -1,0 +1,218 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6e7e8a, #ffffff);
+    color: #333;
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable vertical scroll when needed */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container Styling */
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 80vh; /* Limit the height */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    padding-right: 15px; /* Optional: To avoid the content hiding behind the scrollbar */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #5c6bc0;
+    outline: none;
+    background-color: #fff;
+}
+
+button {
+    padding: 12px;
+    background-color: #5c6bc0;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3f4c8a;
+}
+
+/* Dark Mode Button */
+#dark-mode-toggle {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #444;
+}
+
+/* Display Area Styling */
+#display {
+    margin-top: 40px;
+}
+
+.totalincome {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #0ee00e;  /* Light Green Background */
+    color: black;  /* Green Text Color */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.totalexpense {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ec240e;  /* Light Red Background */
+    color: #080101;  /* Red Text Color */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the net balance (optional) */
+.netbalance {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e8f4f8;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.list .income {
+    background-color: #c8e6c9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list .expense {
+    background-color: #ffcdd2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Canvas Styling */
+canvas {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Canvas Styling for the Chart */
+canvas {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Hover Effects */
+button, .delete-btn {
+    transition: transform 0.2s ease;
+}
+
+button:hover, .delete-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background: #333;
+    color: #f1f1f1;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+}
+
+body.dark-mode button, body.dark-mode .delete-btn {
+    background-color: #555;
+}
+
+body.dark-mode .totalincome, body.dark-mode .totalexpense, body.dark-mode .netbalance {
+    background-color: #444;
+}
+
+body.dark-mode .list .income {
+    background-color: #388e3c;
+}
+
+body.dark-mode .list .expense {
+    background-color: #f44336;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #999;
+    color: #333;
+}

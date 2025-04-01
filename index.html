@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense tracker</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
-    <!-- main container -->
+    <!-- Main Container -->
     <div class="container">
-        <!-- FORM TO ADD TRANSACTION -->
+        <!-- Form to Add Transaction -->
         <form id="transaction-form">
-            <!-- input for transcation Name -->
             <label for="transaction-name">Transaction Name:</label>
             <input type="text" id="transaction-name" required placeholder="Salary, Rent, Groceries">
-            <!-- input for transcation Amount  -->
+            
             <label for="amount">Amount:</label>
             <input type="number" id="amount" required placeholder="Enter amount">
-            <!-- Drop down for transcation type -->
+
             <label for="transaction-type">Transaction Type:</label>
             <select id="transaction-type">
-              <option value="income">Income</option>
-              <option value="expense">Expense</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
             </select>
-          <!-- button to add Transaction -->
+
+            <label for="transaction-category">Category (Optional):</label>
+            <input type="text" id="transaction-category" placeholder="e.g. Rent, Groceries">
+
             <button type="submit">Add Transaction</button>
-          </form>
+        </form>
 
-          <!--DISPLAY AREA-->
-         <div id="display">
-            <!-- Display for total income -->
-            <div class="totalincome">
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
 
-            </div>
-             <!-- display for totalexpense -->
-            <div class="totalexpense">
-
-            </div>
-            <!-- .net bal -->
-             <div class="netbalance">
-
-             </div>
-             <!-- list of transcation -->
-              <div class="list">
-
-              </div>
-         </div> 
+        <!-- Display Area -->
+        <div id="display">
+            <div class="totalincome"></div>
+            <div class="totalexpense"></div>
+            <div class="netbalance"></div>
+            <div class="list"></div>
+            <canvas id="incomeExpenseChart"></canvas>
+        </div>
     </div>
-    <script src="/index.js"></script>
+
+    <script src="index.js"></script>
 </body>
 </html>
